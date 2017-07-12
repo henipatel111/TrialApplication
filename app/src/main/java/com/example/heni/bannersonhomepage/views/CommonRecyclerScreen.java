@@ -58,11 +58,6 @@ public class CommonRecyclerScreen {
         }
     }
 
-    public static CommonRecyclerScreen setupWithActivity(Activity activity) {
-        return new CommonRecyclerScreen(activity, activity.findViewById(R.id.common_recycler_screen));
-    }
-
-
     public RecyclerView getRecyclerView() {
         return recyclerView;
     }

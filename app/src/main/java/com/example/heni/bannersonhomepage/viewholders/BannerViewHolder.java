@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.heni.bannersonhomepage.R;
 import com.example.heni.bannersonhomepage.fragments.BannerFragment;
@@ -86,7 +87,6 @@ public class BannerViewHolder extends RecyclerView.ViewHolder {
             viewPager.setAdapter(pagerAdapter);
             viewPager.setOffscreenPageLimit(bannerList.size());
             circleIndicator.setViewPager(viewPager);
-
             viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override
                 public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -112,32 +112,10 @@ public class BannerViewHolder extends RecyclerView.ViewHolder {
 
         public PagerAdapter(FragmentManager fm) {
             super(fm);
-
-
         }
-        /*@Override
-        public Fragment getItem(int position) {
-            switch (bannerList.get(position).getTitle()) {
-                case "weblink1":
-                    return MyFragment.newInstance(bannerList.get(position));
-                case "lesson1":
-                    return MyFragment.newInstance(bannerList.get(position));
-                case "course1":
-                    return MyFragment.newInstance(bannerList.get(position));
-            }
-            return MyFragment.newInstance(bannerList.get(position));
-        }*/
 
         @Override
         public Fragment getItem(int position) {
-            switch (bannerList.get(position).getTitle()) {
-                case "weblink1":
-                    return BannerFragment.newInstance(bannerList.get(position));
-                case "lesson1":
-                    return BannerFragment.newInstance(bannerList.get(position));
-                case "course1":
-                    return BannerFragment.newInstance(bannerList.get(position));
-            }
             return BannerFragment.newInstance(bannerList.get(position));
         }
         @Override

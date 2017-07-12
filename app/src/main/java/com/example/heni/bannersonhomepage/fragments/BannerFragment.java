@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.heni.bannersonhomepage.R;
 import com.example.heni.bannersonhomepage.models.Banner;
@@ -88,4 +89,5 @@ public class BannerFragment extends Fragment {
         textView1.setText(banner.getLinkUrl());
         textView2.setText(banner.getDescription());
     }
+
 }

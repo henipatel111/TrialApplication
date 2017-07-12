@@ -4,15 +4,15 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:background="@color/google_blue_50"
     tools:context="com.example.heni.bannersonhomepage.fragments.BannerFragment">
 
     <RelativeLayout
         android:id="@+id/rl_holder"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/google_12x"
-        android:layout_marginRight="@dimen/google_12x">
+        android:background="@drawable/rounded_dialog"
+        android:layout_marginLeft="@dimen/google_1x"
+        android:layout_marginRight="@dimen/google_1x">
 
     <!-- <ImageView
            android:id="@+id/img_reference"
