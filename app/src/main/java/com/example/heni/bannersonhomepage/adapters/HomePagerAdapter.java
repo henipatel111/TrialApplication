@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.example.heni.bannersonhomepage.fragments.BannerHomeFragment;
 import com.example.heni.bannersonhomepage.fragments.MenuFragment;
 import com.example.heni.bannersonhomepage.fragments.NotificationFragment;
-import com.example.heni.bannersonhomepage.fragments.PostsFragment;
+import com.example.heni.bannersonhomepage.fragments.PostMainFragment;
 
 /**
  * Created by heni on 8/7/17.
@@ -28,7 +28,7 @@ public class HomePagerAdapter extends FragmentStatePagerAdapter{
                 BannerHomeFragment bannerHomeFragment=new BannerHomeFragment();
                 return bannerHomeFragment;
             case 1:
-                PostsFragment postsFragment =new PostsFragment();
+                PostMainFragment postsFragment =new PostMainFragment();
                 return postsFragment;
             case 2:
                 NotificationFragment notificationFragment=new NotificationFragment();

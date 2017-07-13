@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:post_cardview="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:post_cardview="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:id="@+id/rl_main_post_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/post_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        post_cardview:cardCornerRadius="10dp"
+        android:backgroundTintMode="src_over"
+        CardView.setRadius="10dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_inside_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_textHolder"
+            android:layout_width="match_parent"
+            android:background="@color/google_gray_50"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/post_title"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Post1"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <TextView
+            android:id="@+id/post_description"
+            android:layout_marginLeft="4dp"
+            android:text="THis is my first post"
+            android:layout_below="@+id/post_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/google_1x"/>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/post_description"
+            android:background="@color/google_gray_100"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:layout_below="@+id/rl_textHolder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/shinchan3"
+            android:layout_marginTop="@dimen/google_1x"
+            android:layout_marginBottom="@dimen/google_3x"
+            android:layout_marginLeft="@dimen/google_1x"
+            android:layout_marginRight="@dimen/google_1x"
+            android:visibility="visible"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_post_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="30dp"
+                android:background="@color/google_gray_50"
+                android:layout_below="@id/post_image"
+                >
+
+                <ImageButton
+                    android:id="@+id/btn_like_post"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/oval_white"
+                    android:src="@drawable/like_16"/>
+
+                <ImageButton
+                    android:id="@+id/btn_post_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/btn_like_post"
+                    android:background="@drawable/oval_white"
+                    android:src="@drawable/comment"/>
+
+                <ImageButton
+                    android:id="@+id/btn_post_share"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/btn_post_comment"
+                    android:background="@drawable/oval_white"
+                    android:src="@drawable/share"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+
