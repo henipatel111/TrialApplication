@@ -41,5 +41,6 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
     public void bindItem(CommonRecyclerItem commonRecyclerItem){
         post = (Post) commonRecyclerItem.getItem();
         postText.setText(post.getDescription());
+        postImage.setImageResource(post.getImage());
     }
 }

@@ -58,6 +58,22 @@ public class CommonRecyclerScreen {
         }
     }
 
+    public static CommonRecyclerScreen setupWithFragment(Fragment fragment) {
+        return new CommonRecyclerScreen(fragment.getContext(), fragment.getView());
+    }
+
+    public void setSwipeRefreshing(boolean b) {
+        if (swipeRefreshLayout != null) {
+            swipeRefreshLayout.setRefreshing(b);
+        }
+    }
+
+    public void setSwipeListener(SwipeRefreshLayout.OnRefreshListener swipeRefreshListener) {
+        if (swipeRefreshLayout != null) {
+            swipeRefreshLayout.setOnRefreshListener(swipeRefreshListener);
+        }
+    }
+
     public RecyclerView getRecyclerView() {
         return recyclerView;
     }

@@ -3,6 +3,7 @@ package com.example.heni.bannersonhomepage.fragments;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,6 +51,17 @@ public class PostMainFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         crs = new CommonRecyclerScreen(this.getContext(),view);
+        resetScreen();
+    }
+
+    private void resetScreen(){
+        crs = CommonRecyclerScreen.setupWithFragment(this);
+        crs.setSwipeListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                resetScreen();
+            }
+        });
         createPosts();
     }
 
@@ -65,6 +77,8 @@ public class PostMainFragment extends Fragment {
         }
         postAdapter.setRecyclerItems(crs.getRecyclerItems());
         postAdapter.notifyDataSetChanged();
+
+        crs.setSwipeRefreshing(false);
     }
 
 
@@ -75,11 +89,12 @@ public class PostMainFragment extends Fragment {
                 R.drawable.shinchan1,
                 R.drawable.shinchan2,
                 R.drawable.shinchan3,
+                R.drawable.shinchan4,
         };
         Post post1 = new Post("Post 1", "This is my First Post. :)",images[0]);
         Post post2 = new Post("Post 2", "This is my Second Post. :)",images[1]);
         Post post3 = new Post("Post 3", "This is my third Post. :)",images[2]);
-        Post post4 = new Post("Post 4", "This is my forth Post. :)",images[2]);
+        Post post4 = new Post("Post 4", "This is my forth Post. :)",images[3]);
         postList.add(post1);
         postList.add(post2);
         postList.add(post3);
