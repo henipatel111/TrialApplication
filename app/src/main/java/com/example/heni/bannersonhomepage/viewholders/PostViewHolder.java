@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.example.heni.bannersonhomepage.R;
 import com.example.heni.bannersonhomepage.models.Post;
 import com.example.heni.bannersonhomepage.utilities.CommonRecyclerItem;
+import com.github.chrisbanes.photoview.PhotoView;
 
 import java.util.List;
 
@@ -28,9 +29,11 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
     RelativeLayout rlMainPostHolder;
     @BindView(R.id.post_description)
     TextView postText;
-    @BindView(R.id.post_image)
-    ImageView postImage;
+   /* @BindView(R.id.post_image)
+    ImageView postImage;*/
     Post post;
+    @BindView(R.id.post_photo_view)
+    PhotoView photoView;
 
     public PostViewHolder(View itemView) {
         super(itemView);
@@ -41,6 +44,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
     public void bindItem(CommonRecyclerItem commonRecyclerItem){
         post = (Post) commonRecyclerItem.getItem();
         postText.setText(post.getDescription());
-        postImage.setImageResource(post.getImage());
+       // postImage.setImageResource(post.getImage());
+        photoView.setImageResource(post.getImage());
     }
 }

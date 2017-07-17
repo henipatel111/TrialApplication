@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeItemHeaderHolder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/google_1x">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/google_3x">
+
+            <TextView
+                android:id="@+id/textView_itemTitle"
+                style="@style/reads_header_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Area of triangle"
+                android:textColor="@color/google_gray_800"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView_itemDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Following images shows how to find area of different types of triangles. "
+            android:textColor="@color/google_gray_700"
+            android:textSize="16sp" />
+    </LinearLayout>
+</RelativeLayout>

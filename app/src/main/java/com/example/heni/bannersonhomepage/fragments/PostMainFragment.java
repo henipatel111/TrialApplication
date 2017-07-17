@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.example.heni.bannersonhomepage.R;
+import com.example.heni.bannersonhomepage.adapters.ItemImageAdapter;
 import com.example.heni.bannersonhomepage.adapters.PostAdapter;
 import com.example.heni.bannersonhomepage.models.Post;
 import com.example.heni.bannersonhomepage.utilities.CommonRecyclerItem;
@@ -37,7 +38,7 @@ public class PostMainFragment extends Fragment {
     List<Post> postList;
     Post post;
     CommonRecyclerScreen crs;
-    PostAdapter postAdapter;
+    ItemImageAdapter postAdapter;
     CommonRecyclerItem crPostHolder;
 
     @Override
@@ -67,7 +68,7 @@ public class PostMainFragment extends Fragment {
 
     private void createPosts(){
         postList = getDummyPosts();
-        postAdapter = new PostAdapter(getContext(),crs.getRecyclerItems());
+        postAdapter = new ItemImageAdapter(getContext(),crs.getRecyclerItems());
         crs.getRecyclerView().setLayoutManager(new LinearLayoutManager(getContext()));
         crs.getRecyclerView().setAdapter(postAdapter);
 
@@ -94,7 +95,7 @@ public class PostMainFragment extends Fragment {
         Post post1 = new Post("Post 1", "This is my First Post. :)",images[0]);
         Post post2 = new Post("Post 2", "This is my Second Post. :)",images[1]);
         Post post3 = new Post("Post 3", "This is my third Post. :)",images[2]);
-        Post post4 = new Post("Post 4", "This is my forth Post. :)",images[3]);
+        Post post4 = new Post("Post 4", "This is my forth Post. :)",images[2]);
         postList.add(post1);
         postList.add(post2);
         postList.add(post3);

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.ImageFullScreenActivity">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        tools:showIn="@layout/activity_item_full_screen_image">
+
+
+        <View
+            android:id="@+id/viewWhiteBG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/google_blue_100"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/relative_fullimage_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/thumbPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/photo_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/google_blue_100" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:id="@+id/relative_header"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="?attr/actionBarSize"
+              >
+                <TextView
+                    android:id="@+id/textView_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/google_1x"
+                    android:text="Image of cube"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="@dimen/google_1x"
+                    android:gravity="center_vertical"
+                    android:text="Image of cube"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

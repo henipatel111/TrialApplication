@@ -65,7 +65,7 @@
             android:background="@color/google_gray_100"/>
         </RelativeLayout>
 
-        <ImageView
+       <!-- <ImageView
             android:id="@+id/post_image"
             android:layout_below="@+id/rl_textHolder"
             android:layout_width="match_parent"
@@ -75,7 +75,19 @@
             android:layout_marginBottom="@dimen/google_3x"
             android:layout_marginLeft="@dimen/google_1x"
             android:layout_marginRight="@dimen/google_1x"
-            android:visibility="visible"/>
+            android:visibility="visible"/>-->
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/post_photo_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_textHolder"
+                android:layout_margin="8dp"
+                android:src="@drawable/shinchan3"
+                android:layout_marginTop="@dimen/google_1x"
+                android:layout_marginBottom="@dimen/google_3x"
+                android:layout_marginLeft="@dimen/google_1x"
+                android:layout_marginRight="@dimen/google_1x"/>
+
 
             <RelativeLayout
                 android:id="@+id/rl_post_footer"
@@ -83,7 +95,7 @@
                 android:layout_height="wrap_content"
                 android:paddingRight="30dp"
                 android:background="@color/google_gray_50"
-                android:layout_below="@id/post_image"
+                android:layout_below="@id/post_photo_view"
                 >
 
                 <ImageButton

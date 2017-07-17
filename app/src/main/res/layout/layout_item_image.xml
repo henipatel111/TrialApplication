@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/google_2x">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardBackgroundColor="@color/cardview_shadow_start_color"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardElevation="@dimen/cardview_default_elevation"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cardview_shadow_end_color"
+                android:orientation="vertical">
+
+                <include layout="@layout/layout_item_header" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/google_9x" />
+
+                    <ImageView
+                        android:id="@+id/img_retry"
+                        android:layout_width="@dimen/google_5x"
+                        android:layout_height="@dimen/google_5x"
+                        android:layout_centerInParent="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:src="@drawable/image_retry"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/imageView_image_thumb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/shinchan3"/>
+
+                    <RelativeLayout
+                        android:id="@+id/relative_thumb_overlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/imageView_image_thumb"
+                        android:layout_alignLeft="@+id/imageView_image_thumb"
+                        android:layout_alignRight="@+id/imageView_image_thumb"
+                        android:layout_alignTop="@+id/imageView_image_thumb"
+                        android:layout_centerInParent="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"></RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
