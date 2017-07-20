@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context="in.informationworks.learnaptandroid.coremodule.activities.lessonScreens.lessonhome.LessonHomeActivityFragment">
+
+        <include layout="@layout/appbar_lesson_home" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/google_1x"
+            android:foregroundTint="@android:color/white"
+            android:src="@drawable/ic_play_arrow_white_24dp"
+            android:tint="@android:color/white"
+            android:visibility="gone"
+            app:backgroundTint="@color/google_green_700"
+            app:elevation="12dp"
+            app:layout_anchor="@+id/tabLayout"
+            app:layout_anchorGravity="bottom|right|end" />
+    </android.support.design.widget.CoordinatorLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_overlay"
+        style="@style/item_relativeHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:activityContext="in.informationworks.learnaptandroid.activities.lessonScreens.LPSectionTitleFragment">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            card_view:cardBackgroundColor="@color/colorPrimary"
+            card_view:cardCornerRadius="@dimen/cardview_default_elevation"
+            card_view:cardElevation="@dimen/cardview_default_elevation">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/google_13x">
+
+                <ImageView
+                    android:id="@+id/imageView_overlay_coverImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/imageView_overlay_coverImageOverLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/gradient_item_section_image"
+                    android:tint="@color/colorPrimary" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/google_1x">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView_overlay_lessonName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center"
+                        android:text="When does food get spoilt?"
+                        android:textColor="@android:color/white"
+                        android:textSize="34sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/google_3x"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/google_4x"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/progressbar_overlay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:indeterminateTint="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/textView_overlay_progressText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Preparing lesson..."
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+</RelativeLayout>

@@ -21,4 +21,12 @@
     <dimen name="google_16x">280dp</dimen>
     <dimen name="google_17x">300dp</dimen>
 
+    <dimen name="cardview_shadow_top_margin">4dp</dimen>
+    <dimen name="cardview_top_margin">3dp</dimen>
+    <dimen name="half_card_padding">4dp</dimen>
+    <dimen name="twoToOneCoverHeight">80dp</dimen>
+    <dimen name="la_cardview_default_radius">2dp</dimen>
+    <dimen name="fixed_lesson_width">150dp</dimen>
+    <dimen name="scrolling_viewall_width">150dp</dimen>
+    <dimen name="inter_section_distance">16dp</dimen>
 </resources>

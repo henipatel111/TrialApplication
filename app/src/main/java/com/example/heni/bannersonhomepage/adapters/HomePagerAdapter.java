@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.heni.bannersonhomepage.fragments.BannerHomeFragment;
+import com.example.heni.bannersonhomepage.fragments.MainHomeFragment;
 import com.example.heni.bannersonhomepage.fragments.MenuFragment;
 import com.example.heni.bannersonhomepage.fragments.NotificationFragment;
 import com.example.heni.bannersonhomepage.fragments.PostMainFragment;
@@ -25,8 +26,11 @@ public class HomePagerAdapter extends FragmentStatePagerAdapter{
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                BannerHomeFragment bannerHomeFragment=new BannerHomeFragment();
-                return bannerHomeFragment;
+                /*BannerHomeFragment bannerHomeFragment=new BannerHomeFragment();
+                return bannerHomeFragment;*/
+                MainHomeFragment mainHomeFragment = new MainHomeFragment();
+                return mainHomeFragment;
+            
             case 1:
                 PostMainFragment postsFragment =new PostMainFragment();
                 return postsFragment;

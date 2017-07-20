@@ -17,4 +17,102 @@
         <item name="android:textSize">24sp</item>
     </style>
 
+    <style name="cardTitleIcon">
+        <item name="android:layout_marginTop">@dimen/half_card_padding</item>
+        <item name="android:layout_marginBottom">@dimen/half_card_padding</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:layout_width">@dimen/google_3x</item>
+        <item name="android:layout_height">@dimen/google_3x</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:src">@drawable/ic_schedule_white_24dp</item>
+        <item name="android:tint">@color/google_gray_700</item>
+    </style>
+
+    <style name="cardTitle">
+        <item name="android:layout_marginLeft">@dimen/half_card_padding</item>
+        <item name="android:layout_marginRight">@dimen/half_card_padding</item>
+        <item name="android:layout_marginTop">@dimen/half_card_padding</item>
+        <item name="android:layout_marginBottom">@dimen/half_card_padding</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_toRightOf">@+id/cardHeaderIcon</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/google_gray_700</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="cardTitleAction">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:padding">@dimen/google_1x</item>
+        <item name="android:text">Action</item>
+        <item name="android:textColor">@color/google_gray_700</item>
+        <item name="android:tint">@color/google_gray_900</item>
+    </style>
+
+    <style name="cardTitleHolder">
+        <item name="android:paddingLeft">@dimen/half_card_padding</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="upButton">
+        <item name="android:tint">@color/appbarContentColor</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_width">36dp</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_marginLeft">@dimen/google_2x</item>
+        <item name="android:layout_marginRight">@dimen/google_2x</item>
+        <item name="android:layout_marginTop">@dimen/google_1x</item>
+        <item name="android:layout_marginBottom">@dimen/google_1x</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:src">@drawable/ic_arrow_back_black_24dp</item>
+    </style>
+
+    <style name="customAppbarTitle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/appbarContentColor</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:text">Title</item>
+    </style>
+
+    <style name="customAppbarSubtitle" parent="Base.TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textColor">@color/appbarContentColor</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:text">subtitle</item>
+    </style>
+
+    <style name="search_option_button">
+        <item name="android:visibility">gone</item>
+        <item name="android:padding">@dimen/google_1x</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:tint">@color/appbarContentColor</item>
+    </style>
+
+    <style name="item_relativeHolder">
+
+    </style>
+
+    <style name="ratingStar">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:src">@drawable/ic_star_white_24dp</item>
+        <item name="android:tint">@color/google_gray_600</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
 </resources>

@@ -79,7 +79,18 @@ public class CommonRecyclerItem {
         LOADING(0),
         BANNER_PAGER(1),
         POST_CARD(2),
-        ;
+        LESSONS_COURSES_SCROLLER(3),
+        STANDALONE_CARD_HEADER(4),
+        LESSON_TILE(5),
+        SCROLLING_VIEW_ALL(7),
+        CATEGORY_SECTION(8),
+        CARD_ACK(9),
+        MORE_LOADING(10),
+        CATEGORY_LIST_ITEM(11),
+        CARD_END(12),
+        CATEGORY_PRIMARY_CARD(13),
+        CHILDREN_HOME(14);
+
 
         private final int id;
 

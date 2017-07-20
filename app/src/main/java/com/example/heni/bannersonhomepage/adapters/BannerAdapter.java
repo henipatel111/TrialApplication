@@ -36,7 +36,7 @@ public class BannerAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        ((BannerViewHolder) holder).bindItem(recyclerItems.get(position));
+        ((BannerViewHolder) holder).bindItem(context,recyclerItems.get(position));
     }
 
     @Override

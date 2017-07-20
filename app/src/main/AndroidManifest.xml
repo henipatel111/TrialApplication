@@ -20,6 +20,10 @@
         <activity android:name=".activities.ImageFullScreenActivity"
             android:theme="@style/Theme.Design.Light.NoActionBar">
         </activity>
+
+        <activity android:name=".activities.ViewAllListActivity"
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 
 </manifest>

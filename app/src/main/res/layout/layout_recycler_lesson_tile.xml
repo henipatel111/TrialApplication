@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_lesson_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView_lesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardview_shadow_top_margin"
+        android:layout_marginLeft="@dimen/cardview_shadow_top_margin"
+        android:layout_marginRight="@dimen/cardview_shadow_top_margin"
+        android:layout_marginTop="@dimen/cardview_top_margin"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/card_background"
+        card_view:cardCornerRadius="@dimen/la_cardview_default_radius"
+        card_view:cardElevation="@dimen/cardview_default_elevation"
+        card_view:cardPreventCornerOverlap="true">
+
+        <LinearLayout
+            android:id="@+id/lessonTile_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relative_coverHolder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twoToOneCoverHeight"
+                android:layout_alignParentTop="true"
+                android:background="@color/sample_muted_color">
+
+                <ImageView
+                    android:id="@+id/imageView_coverImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/demo_cube" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linear_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:padding="@dimen/half_card_padding">
+
+                <TextView
+                    android:id="@+id/textView_lessonTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/textView_lessonSub"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:lines="2"
+                    android:text="Agriculture"
+                    android:textColor="@color/google_gray_900"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textView_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView_lessonTitle"
+                    android:fontFamily="sans-serif"
+                    android:singleLine="true"
+                    android:text="by Learnapt.com"
+                    android:textColor="@color/google_gray_600"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:id="@+id/relative_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="FREE"
+                        android:textColor="@color/google_red_700"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:id="@+id/relative_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="3.5"
+                                android:textColor="@color/google_gray_600"
+                                android:textSize="12sp" />
+
+                            <ImageView
+                                android:id="@+id/ratingStar1"
+                                style="@style/ratingStar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/google_2x" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

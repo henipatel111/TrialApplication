@@ -1,5 +1,6 @@
 package com.example.heni.bannersonhomepage.viewholders;
 
+import android.content.Context;
 import android.os.CountDownTimer;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -79,7 +80,7 @@ public class BannerViewHolder extends RecyclerView.ViewHolder {
         countDownTimer.start();
     }
 
-    public void bindItem(CommonRecyclerItem commonRecyclerItem){
+    public void bindItem(Context context, CommonRecyclerItem commonRecyclerItem){
         if(pagerAdapter == null){
             bannerList = (List<Banner>) commonRecyclerItem.getItem();
             appCompatActivity = (AppCompatActivity) commonRecyclerItem.getOptions().get(0);
