@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.heni.bannersonhomepage">
+    package="com.example.heni.MyApp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
     <application
         android:allowBackup="true"
@@ -9,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity">
+        <activity android:name="com.example.heni.MyApp.activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,11 +21,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activities.ImageFullScreenActivity"
+        <activity android:name="com.example.heni.MyApp.activities.ImageFullScreenActivity"
             android:theme="@style/Theme.Design.Light.NoActionBar">
         </activity>
 
-        <activity android:name=".activities.ViewAllListActivity"
+        <activity android:name="com.example.heni.MyApp.activities.ViewAllListActivity"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <activity android:name="com.example.heni.MyApp.activities.VideoPlayerActivity"
             android:theme="@style/AppTheme">
         </activity>
     </application>

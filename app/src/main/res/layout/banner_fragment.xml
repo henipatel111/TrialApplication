@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context="com.example.heni.bannersonhomepage.fragments.BannerFragment">
+    tools:context="com.example.heni.MyApp.fragments.BannerFragment">
 
     <RelativeLayout
         android:id="@+id/rl_holder"
