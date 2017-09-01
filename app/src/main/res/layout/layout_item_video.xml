@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/google_2x"
+    tools:context="com.example.heni.MyApp.viewholders.ItemVideoViewHolder">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        card_view:cardBackgroundColor="@color/card_background"
+        card_view:cardCornerRadius="@dimen/la_cardview_default_radius"
+        card_view:cardElevation="@dimen/cardview_default_elevation"
+        card_view:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/linearLike"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/google_3x">
+
+                    <TextView
+                        android:id="@+id/textView_itemTitle"
+                        style="@style/reads_header_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/image_option_menu"
+                        android:text="Area of triangle"
+                        android:textColor="@color/google_gray_800"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/image_option_menu"
+                        android:layout_width="@dimen/google_4x"
+                        android:layout_height="@dimen/google_3x"
+                        android:layout_alignParentRight="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:tint="@color/google_gray_500" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textView_itemDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Following images shows how to find area of different types of triangles. "
+                    android:textColor="@color/google_gray_700"
+                    android:textSize="16sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/relative_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/google_9x" />
+
+                    <ImageView
+                        android:id="@+id/imageView_image_thumb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:adjustViewBounds="true" />
+
+                    <RelativeLayout
+                        android:id="@+id/relative_video_thumb_overlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBottom="@+id/imageView_image_thumb"
+                        android:layout_alignLeft="@+id/imageView_image_thumb"
+                        android:layout_alignRight="@+id/imageView_image_thumb"
+                        android:layout_alignTop="@+id/imageView_image_thumb"
+                        android:layout_centerInParent="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_youtube" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

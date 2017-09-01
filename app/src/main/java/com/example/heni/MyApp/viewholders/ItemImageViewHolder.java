@@ -79,6 +79,8 @@ public class ItemImageViewHolder extends RecyclerView.ViewHolder {
             relative_thumbOverlay.setVisibility(View.VISIBLE);
            // Picasso.with(context).load(post.getImage()).into(imgThumb);
             imgThumb.setImageResource(post.getImage());
-        }
+    }
+
+
 
 }

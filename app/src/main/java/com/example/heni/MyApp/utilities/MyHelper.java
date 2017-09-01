@@ -2,6 +2,7 @@ package com.example.heni.MyApp.utilities;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -13,6 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.heni.MyApp.R;
+import com.example.heni.MyApp.activities.YouTubeVideoPlayer;
 
 /**
  * Created by heni on 8/7/17.
@@ -61,5 +63,24 @@ public class MyHelper {
         animationDrawable = (AnimationDrawable) imgProgress.getBackground();
         imgProgress.setVisibility(View.VISIBLE);
         animationDrawable.start();
+    }
+
+    public static void playVideoForYoutubeID(Context context, String youtubeID) {
+        if (youtubeID != null) {
+            Intent intent = new Intent(context, YouTubeVideoPlayer.class);
+            intent.putExtra(YouTubeVideoPlayer.EXTRA_YOUTUBE_VIDEO_ID, youtubeID);
+            (context).startActivity(intent);
+        } else {
+            openLinkInWebTab(context, "", youtubeID);
+        }
+    }
+
+    public static void openLinkInWebTab(Context mContext, String title, String linkUrl) {
+        Intent intent = new Intent(mContext, WebTab.class);
+        intent.putExtra(WebTab.EXTRA_URL, linkUrl);
+        intent.putExtra(WebTab.EXTRA_TITLE, title);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        mContext.startActivity(intent);
+        ((Activity) mContext).overridePendingTransition(R.anim.abc_slide_in_bottom, R.anim.steady);
     }
 }

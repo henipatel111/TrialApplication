@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/linearLike"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -23,11 +24,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/image_option_menu"
                 android:text="Area of triangle"
                 android:textColor="@color/google_gray_800"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:id="@+id/image_option_menu"
+                android:layout_width="@dimen/google_4x"
+                android:layout_height="@dimen/google_3x"
+                android:layout_alignParentRight="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:tint="@color/google_gray_500" />
         </RelativeLayout>
 
         <TextView

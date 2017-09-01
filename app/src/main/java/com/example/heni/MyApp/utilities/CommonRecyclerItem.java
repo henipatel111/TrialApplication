@@ -78,7 +78,7 @@ public class CommonRecyclerItem {
     public enum ItemType {
         LOADING(0),
         BANNER_PAGER(1),
-        POST_CARD(2),
+        POST_IMAGE(2),
         LESSONS_COURSES_SCROLLER(3),
         STANDALONE_CARD_HEADER(4),
         LESSON_TILE(5),
@@ -91,7 +91,8 @@ public class CommonRecyclerItem {
         CATEGORY_PRIMARY_CARD(13),
         CHILDREN_HOME(14),
         ITEM_VIDEO(15),
-        NEW_COMMENT_ITEM(16);
+        NEW_COMMENT_ITEM(16),
+        POST_VIDEO(17);
 
 
         private final int id;

@@ -22,7 +22,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.example.heni.MyApp.utilities.CommonRecyclerItem.ItemType.POST_CARD;
+import static com.example.heni.MyApp.models.Post.PostType.IMAGE;
+import static com.example.heni.MyApp.models.Post.PostType.VIDEO;
+import static com.example.heni.MyApp.utilities.CommonRecyclerItem.ItemType.POST_IMAGE;
+import static com.example.heni.MyApp.utilities.CommonRecyclerItem.ItemType.POST_VIDEO;
 
 /**
  * Created by heni on 8/7/17.
@@ -39,9 +42,6 @@ public class PostMainFragment extends Fragment {
     CommonRecyclerScreen crs;
     ItemImageAdapter postAdapter;
     CommonRecyclerItem crPostHolder;
-
-    String IMAGE = Post.PostType.IMAGE;
-    String VIDEO = Post.PostType.VIDEO;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -75,8 +75,14 @@ public class PostMainFragment extends Fragment {
         crs.getRecyclerView().setAdapter(postAdapter);
 
         for(int i=0; i<postList.size();i++) {
-            crPostHolder = new CommonRecyclerItem(POST_CARD, postList.get(i));
-            crs.getRecyclerItems().add(crPostHolder);
+            if(postList.get(i).getPostType() == IMAGE){
+                crPostHolder = new CommonRecyclerItem(POST_IMAGE, postList.get(i));
+                crs.getRecyclerItems().add(crPostHolder);
+            }else if(postList.get(i).getPostType() == VIDEO){
+                crPostHolder = new CommonRecyclerItem(POST_VIDEO, postList.get(i));
+                crs.getRecyclerItems().add(crPostHolder);
+            }
+
         }
         postAdapter.setRecyclerItems(crs.getRecyclerItems());
         postAdapter.notifyDataSetChanged();
@@ -100,11 +106,12 @@ public class PostMainFragment extends Fragment {
                 "",
         };
 
-        Post post1 = new Post("Post 1", "This is my First Post.dfdgkfgfdkgjdfgjfldkjgofgreigjkdflgfdkk lkdjgkdfjgkdfj dlkgflkdgjfkd lkgjrjtgrjg gjldfkgjfldkjgkdfljlkdfj lkdjgkdfjgkdfljgkldfjlkdfj eoir  oiewifjdifjoi weifowefiwejfieowjf lsjfewijrijfevjfdvjdf ifowfjwoeifjiwofjoijiowjfiowjf oijfoijfoweijfwojfv oeijfosdfjdoifjoidjfoweijf sijfoidfjoifjweoijfoweiv sd sdfds wfedww weffw :)",images[0], IMAGE);
-        Post post2 = new Post("Post 2", "This is my Second Post. :)",images[1], IMAGE);
-        Post post3 = new Post("Post 3", "This is my third Post. :)",images[2], IMAGE);
-        Post post4 = new Post("Post 4", "This is my fourth Post. :)",images[2], IMAGE);
-        Post post5 = new Post("Post 5", "This is my fifth Post. :)",images[2], IMAGE);
+        Post post1 = new Post("Post 1", "This is my First Post.dfdgkfgfdkgjdfgjfldkjgofgreigjkdflgfdkk lkdjgkdfjgkdfj dlkgflkdgjfkd lkgjrjtgrjg gjldfkgjfldkjgkdfljlkdfj lkdjgkdfjgkdfljgkldfjlkdfj eoir  oiewifjdifjoi weifowefiwejfieowjf lsjfewijrijfevjfdvjdf ifowfjwoeifjiwofjoijiowjfiowjf oijfoijfoweijfwojfv oeijfosdfjdoifjoidjfoweijf sijfoidfjoifjweoijfoweiv sd sdfds wfedww weffw :)",images[0],IMAGE, null, null);
+        Post post2 = new Post("Post 2", "This is my Second Post. :)",images[1],IMAGE, null, null);
+        Post post3 = new Post("Post 3", "This is my third Post. :)",images[2], IMAGE,null,null);
+        Post post4 = new Post("Post 4", "This is my fourth Post. :)",images[3],IMAGE,null,null);
+        Post post5 = new Post("Post 5", "This is my fifth Post. :)",images[2], VIDEO, "https://www.youtube.com/watch?v=QmOMAGmGAnI", "QmOMAGmGAnI");
+
         postList.add(post1);
         postList.add(post2);
         postList.add(post3);

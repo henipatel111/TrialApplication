@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:id="@+id/linear_counts"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/google_3x"
+        android:layout_margin="@dimen/google_1x"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linear_viewCountHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:orientation="horizontal"
+            android:padding="@dimen/half_card_padding">
+
+            <ImageView
+                android:id="@+id/imageView_ic_views"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@color/transparent"
+                android:padding="2dp"
+                android:src="@drawable/ic_visibility_white_24dp"
+                android:tint="@color/google_gray_600" />
+
+            <TextView
+                android:id="@+id/textView_viewCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/half_card_padding"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:text="253 views"
+                android:textColor="@color/google_gray_600"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_commentViewHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/google_1x"
+            android:background="@color/transparent"
+            android:orientation="horizontal"
+            android:padding="@dimen/half_card_padding">
+
+            <ImageView
+                android:id="@+id/imageView_ic_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="2dp"
+                android:src="@drawable/ic_comment_white_24dp"
+                android:tint="@color/google_gray_600" />
+
+            <TextView
+                android:id="@+id/textView_commentCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/half_card_padding"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:text="83 Comments"
+                android:textColor="@color/google_gray_600"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_recommendationViewHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/google_1x"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/half_card_padding"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageView_ic_recommendation"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:background="@color/transparent"
+                android:padding="2dp"
+                android:src="@drawable/ic_thumb_up_white_24dp"
+                android:tint="@color/google_gray_600" />
+
+            <TextView
+                android:id="@+id/textView_recommendationCount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/half_card_padding"
+                android:background="@color/transparent"
+                android:gravity="center_vertical"
+                android:text="9 recommendations"
+                android:textColor="@color/google_gray_600"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
