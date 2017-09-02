@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
     defaultConfig {
-        applicationId "com.example.heni.bannersonhomepage"
+        applicationId "com.example.heni.MyApp"
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
