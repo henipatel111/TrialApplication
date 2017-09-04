@@ -14,5 +14,21 @@
             android:onClick="onClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/rv_rlholder"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_send_notification"
+            android:text="Send Notification"
+            android:onClick="onClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
     </RelativeLayout>
 </LinearLayout>

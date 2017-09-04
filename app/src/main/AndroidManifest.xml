@@ -32,6 +32,10 @@
         <activity android:name="com.example.heni.MyApp.activities.VideoPlayerActivity"
             android:theme="@style/AppTheme">
         </activity>
+
+        <activity android:name="com.example.heni.MyApp.activities.NotificationActivity"
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 
 </manifest>
