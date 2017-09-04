@@ -13,7 +13,7 @@
         android:background="@drawable/oval_white"
         android:elevation="@dimen/google_1x"
         android:padding="@dimen/google_1x"
-        android:visibility="invisible">
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/img_progress"
