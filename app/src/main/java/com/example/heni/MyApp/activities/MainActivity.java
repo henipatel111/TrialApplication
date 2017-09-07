@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.heni.MyApp.R;
 import com.example.heni.MyApp.adapters.HomePagerAdapter;
+import com.example.heni.MyApp.utilities.FBInstanceIdService;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity{
     ViewPager viewPager;
     @BindView(R.id.tabLayout)
     TabLayout tabLayout;
+
+    String deviceToken;
 
     HomePagerAdapter homePagerAdapter;
 
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity{
         homePagerAdapter = new HomePagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
         viewPager.setAdapter(homePagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
+        deviceToken = FBInstanceIdService.getDeviceToken();
     }
 
 

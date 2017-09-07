@@ -91,7 +91,8 @@ public class CommonRecyclerItem {
         CATEGORY_PRIMARY_CARD(13),
         CHILDREN_HOME(14),
         ITEM_VIDEO(15),
-        NEW_COMMENT_ITEM(16);
+        NEW_COMMENT_ITEM(16),
+        NOTIFIACTION(17);
 
 
         private final int id;
