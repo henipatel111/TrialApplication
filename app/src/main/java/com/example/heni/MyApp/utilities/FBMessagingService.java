@@ -172,7 +172,7 @@ public class FBMessagingService extends FirebaseMessagingService{
                         .setContentTitle("FCM Notifications Example")
                         .setContentText(messageBody);
 
-        Intent notificationIntent = new Intent(this, MainActivity.class);
+        Intent notificationIntent = new Intent(this, NotificationFragment.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
         builder.setContentIntent(contentIntent);
