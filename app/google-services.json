@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "674737249982",
-    "firebase_url": "https://videoplayer-177105.firebaseio.com",
-    "project_id": "videoplayer-177105",
-    "storage_bucket": "videoplayer-177105.appspot.com"
+    "project_number": "732012785522",
+    "firebase_url": "https://my-first-trial-project-179210.firebaseio.com",
+    "project_id": "my-first-trial-project-179210",
+    "storage_bucket": "my-first-trial-project-179210.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:674737249982:android:766881d2c548d900",
+        "mobilesdk_app_id": "1:732012785522:android:766881d2c548d900",
         "android_client_info": {
           "package_name": "com.example.heni.MyApp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "674737249982-mkbqk23ice0fe6ls366q89ohhalp9h7m.apps.googleusercontent.com",
-          "client_type": 3
-        },
-        {
-          "client_id": "674737249982-mma1ur12u3d9e9nrt21kaacc6s5fpa9c.apps.googleusercontent.com",
+          "client_id": "732012785522-8pca01e5rstac72rir5pkn1cch7jf4qp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.heni.MyApp",
             "certificate_hash": "d59496c345f04b4e842f6954da0dc9c74cdb21d1"
           }
+        },
+        {
+          "client_id": "732012785522-hq017ahsfpn9bmupjjeu9qhd04ss0474.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDDqI4g2bGR3cacpIZB-rGMTCKVW0G4_HA"
+          "current_key": "AIzaSyBBwYLZz7Sr_DIuDoT5DAI4Mg1E18SE9dc"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "674737249982-mkbqk23ice0fe6ls366q89ohhalp9h7m.apps.googleusercontent.com",
+              "client_id": "732012785522-hq017ahsfpn9bmupjjeu9qhd04ss0474.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

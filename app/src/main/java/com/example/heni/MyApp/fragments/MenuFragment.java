@@ -11,12 +11,14 @@ import android.support.v4.app.NotificationCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
 import com.example.heni.MyApp.R;
 import com.example.heni.MyApp.activities.ImageFullScreenActivity;
 import com.example.heni.MyApp.activities.VideoPlayerActivity;
+import com.example.heni.MyApp.activities.WebViewActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,6 +35,8 @@ public class MenuFragment extends Fragment {
     Button videoButton;
     @BindView(R.id.btn_send_notification)
     Button sendNotificationButton;
+    @BindView(R.id.btn_try_webview)
+    Button tryWebView;
 
 
     @Override
@@ -66,6 +70,12 @@ public class MenuFragment extends Fragment {
                 addNotification();
             }
         });
+        tryWebView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWebViewActivity();
+            }
+        });
     }
     private void addNotification(){
         NotificationCompat.Builder builder =
@@ -82,6 +92,10 @@ public class MenuFragment extends Fragment {
         // Add as notification
        NotificationManager manager = (NotificationManager) getContext().getSystemService(Context.NOTIFICATION_SERVICE);
        manager.notify(0, builder.build());
+    }
 
+    private void openWebViewActivity(){
+        Intent intent = new Intent(getContext(),WebViewActivity.class);
+        getContext().startActivity(intent);
     }
 }
